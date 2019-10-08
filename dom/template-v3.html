@@ -1,0 +1,22 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+   <p>{{ titulo }}</p>
+   <p>{{ saudacao() }}</p>
+</div>
+
+<script>
+   new Vue({
+      el: '#app',
+      data: {
+         titulo: 'Usando VueJS!'
+      },
+      methods: {
+         saudacao: function () {
+            console.log(this);
+            return this.titulo; //não é possivel ter um dado(dentro de data) e uma função(dentro de methods) com o mesmo nome, da conflito
+         }
+      }
+   })
+
+</script>
