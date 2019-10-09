@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/bootstrap"></script>
+
+<div id="app">
+   <h3>Listas</h3>
+   <hr>
+   <ul>
+      <li v-for="(cor, i) in cores">{{ cor }} - {{ i }}</li>
+      <hr>
+      <li v-for="(cor, i) in cores">{{ cor }} - {{ i + 1 }}</li>
+      <hr>
+      <li v-for="(cor, i) in cores">{{ i }} ) {{ cor }}</li>
+   </ul>
+   <hr>
+   <template v-for="(cor, i) in cores">
+      <h1>{{ cor }}</h1>
+      <p>{{ i }}</p>
+   </template>
+   <hr>
+   <div v-for="(cor, i) in cores">
+      <h1>{{ cor }}</h1>
+      <p>{{ i }}</p>
+   </div>
+</div>
+
+
+<script>
+   new Vue({
+      el: '#app',
+      data: {
+        cores: ['vermelho', 'verde', 'amarelo', 'azul'],
+        pessoas: [
+           {nome: 'ana', idade: 26, peso: 59},
+           {nome: 'Guilherme', idade: 22, peso: 89},
+         ]
+      }
+   })
+</script>
+
+<style>
+   ul {
+      list-style: none;
+   }
+   h1, p {
+      display: inline;
+   }
+</style>
