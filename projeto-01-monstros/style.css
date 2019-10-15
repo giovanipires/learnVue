@@ -1,0 +1,142 @@
+/* GERAL */
+
+html {
+   font-family: 'Montserrat', sans-serif;
+}
+
+#app {
+   display: flex;
+   flex-direction: column;
+}
+
+.panel {
+   margin: 10px;
+   padding: 20px;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* AREA DOS PONTOS */
+
+.scores {
+   display: flex;
+}
+
+.score {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.score h1 {
+   font-weight: 300;
+   font-size: 1.6rem;
+}
+
+.life-bar {
+   width: 80%;
+   height: 20px;
+   border: 1px solid #AAA;
+}
+
+.life-bar .life {
+   display: flex;
+   justify-content: center;
+   height: 100%;
+   background-color: green;
+}
+
+.life-bar .life.danger {
+   background-color: red;
+}
+
+/* AREA DO RESULTADO */
+
+.result {
+   display: flex;
+   justify-content: center;
+   font-size: 1.3rem;
+   font-weight: 600;
+}
+
+.result .win {
+   color: green;
+}
+
+.result .lose {
+   color: red;
+}
+
+/* AREA DO BOTAO */
+
+.buttons {
+   display: flex;
+   justify-content: center;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 5px;
+   font-weight: 300;
+   font-size: 1.15rem;
+   text-transform: uppercase;
+}
+
+.buttons .attack {
+   background-color: #EE3831;
+   border-color:#EE3831;
+   color: white;
+}
+
+.buttons .specialAttack {
+   background-color: #F2CD00;
+   border-color:#F2CD00;
+   color: black;
+}
+
+.buttons .heal {
+   background-color: #00B388;
+   border-color:#00B388;
+   color: white;
+}
+
+.buttons .giveUp {
+   background-color: #CFCDC9;
+   border-color:#CFCDC9;
+   color: black;
+}
+
+.buttons .start {
+   background-color: #0072CE;
+   border-color:#0072CE;
+   color: white;
+}
+
+/* AREA DOS LOGS */
+
+.logs ul {
+   display: flex;
+   flex-direction: column;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.logs ul li {
+   display: flex;
+   justify-content: center;
+   margin: 4px 0px;
+   padding: 3px 0px;
+   font-weight: 600;
+   font-size: 1.1rem;
+   text-transform: uppercase;
+   border-radius:  3px;
+}
+
+.player {
+   background-color: #4253afaa;
+   color: #fff;
+}
+.monster {
+   background-color: #e51c23aa;
+   color: #fff;
+}
