@@ -4,11 +4,15 @@
         <p>Vários detalhes...</p>
         <!-- <p>Nome do usuário: <strong>{{ nome }}</strong></p> -->
         <p>Nome invertido: <strong>{{ inverterNome() }}</strong></p>
+        <p>Idade do usuário: <strong>{{ idade }}</strong></p>
         <button @click="reiniciarNome">Reiniciar Nome</button>
+        <button @click="reiniciarFn">Reiniciar nome (callback)</button>
     </div>
 </template>
 
 <script>
+import barramento from '@/barramento'
+
 export default {
     props: {
         nome: {
@@ -19,7 +23,8 @@ export default {
             //     return Array(10).fill(0).join(',')
             // }
         },
-        perfil: String
+        reiniciarFn: Function,
+        idade: Number
     },
     methods: {
         inverterNome() {
@@ -29,6 +34,11 @@ export default {
             this.nome = 'Pedro'
             this.$emit('nomeMudou', this.nome)
         },
+    },
+    created() {
+        barramento.quandoIdadeMudar(idade => {
+            this.idade = idade
+        })
     },
 }
 </script>
