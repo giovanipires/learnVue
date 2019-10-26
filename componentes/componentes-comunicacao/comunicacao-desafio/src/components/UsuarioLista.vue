@@ -9,7 +9,7 @@
             </thead>
             <tbody>
                 <tr v-for="usuario in usuarios" :key="usuario.id"
-                    @click="setUsuarioSelecionado(usuario)"
+                    @click="setUsuarioSelecionado(...usuario)"
                 >
                     <td>{{ usuario.id }}</td>
                     <td>{{ usuario.nome }}</td>
@@ -27,6 +27,7 @@ export default {
     methods: {
         setUsuarioSelecionado(usuario) {
             barramento.setUsuarioSelecionado(usuario)
+            this.usuarios.pop()
         }
     },
 }

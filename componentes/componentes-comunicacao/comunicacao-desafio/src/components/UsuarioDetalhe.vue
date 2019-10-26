@@ -3,8 +3,8 @@
         <h2 v-if="!usuario">Usuário não selecionado!</h2>
         <div v-else>
             <h2>ID: {{ usuario.id }}</h2>
-            <h2>Nome: {{ usuario.nome }}</h2>
-            <h2>Idade: {{ usuario.idade }}</h2>
+            <h3>Nome: {{ usuario.nome }}</h3>
+            <h3>Idade: {{ usuario.idade }}</h3>
         </div>
     </div>
 </template>
@@ -30,5 +30,8 @@ export default {
     .usuario-detalhe {
         flex: 1;
         border: 1px solid #CCC;
+    }
+    h2 {
+        color: red;
     }
 </style>
