@@ -6,7 +6,8 @@
       <!-- :to="{ name: 'editarUsuario', parms: { id: $route.params.id }}" -->
      <router-link tag="button" primario 
       :to="{ name: 'editarUsuario', parms: { id },
-        query:{completo: true, ligua:pt}}"
+        query:{completo: true, ligua:pt},
+        hash: '#rodape' }"
      >
        Editar
      </router-link>
@@ -16,6 +17,9 @@
 <script>
 export default {
    props: ['id'],
+   beforeRouteEnter (to, from, next) {
+     console.log('dentro do componente -> usuário detalhe')
+   }
   // data() {
   //   return {
   //     id: this.$route.params.id
